@@ -86,12 +86,23 @@ public class Main {
                 hasNotWon = false;
             }
 
-            // switch user
-            if (player.equals("X")) {
-                player = "O";
-            } else {
-                player = "X";
+            // if no one won then switch users
+            if (hasNotWon) {
+                if (player.equals("X")) {
+                    player = "O";
+                } else {
+                    player = "X";
+                }
             }
+        }
+        if (player.equals("X")) {
+            System.out.println("-----------------");
+            System.out.println("Player 1 won!!!!!");
+            System.out.println("-----------------");
+        } else {
+            System.out.println("-----------------");
+            System.out.println("Player 2 won!!!!!");
+            System.out.println("-----------------");
         }
     }
 }
