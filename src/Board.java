@@ -48,7 +48,6 @@ public class Board {
                 values += ticTacToeBoard[y][x];
             }
             if (values.equals("XXX") || values.equals("OOO")) {
-//                System.out.println("win");
                 return true;
             }
         }
@@ -65,7 +64,6 @@ public class Board {
                 values += ticTacToeBoard[x][y];
             }
             if (values.equals("XXX") || values.equals("OOO")) {
-//                System.out.println("win");
                 return true;
             }
         }
@@ -79,9 +77,7 @@ public class Board {
         for (int pos = 0; pos < 3; pos++) {
             topLeftToRightDiagonalValue += ticTacToeBoard[pos][pos];
         }
-//        System.out.println(topLeftToRightDiagonalValue);
         if (topLeftToRightDiagonalValue.equals("XXX")) {
-//            System.out.println("win");
             return true;
         }
 
@@ -91,9 +87,7 @@ public class Board {
             topRightToLeftDiagonalValue += ticTacToeBoard[pos][opposite];
             opposite--;
         }
-//        System.out.println(topRightToLeftDiagonalValue);
-        if (topRightToLeftDiagonalValue.equals("XXX")) {
-//            System.out.println("win");
+        if (topRightToLeftDiagonalValue.equals("XXX") || topRightToLeftDiagonalValue.equals("OOO")) {
             return true;
         }
 
